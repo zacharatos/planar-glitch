@@ -1,0 +1,15 @@
+{
+  "name": "planar-glitch",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Development tooling for the Planar Glitch Foundry VTT module (the module itself has no dependencies).",
+  "type": "module",
+  "license": "MIT",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "lint": "node tools/check-syntax.mjs",
+    "test": "npm run lint && node --test \"tests/*.test.mjs\"",
+    "stamp": "node tools/stamp-manifest.mjs",
+    "package": "node tools/package.mjs"
+  }
+}

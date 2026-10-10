@@ -1,0 +1,300 @@
+{
+  "schema": 1,
+  "id": "default",
+  "name": { "en": "Generic glitches", "el": "Γενικά σφάλματα" },
+  "description": { "en": "The glitch list shipped with the module: five tiers, from cosmetic to costly.", "el": "Η λίστα που συνοδεύει το module: πέντε βαθμίδες, από το εμφανισιακό ως το βαρύ." },
+  "tiers": [
+    { "tier": 1, "name": { "en": "Flicker", "el": "Τρεμόπαιγμα" }, "hint": { "en": "Roleplay only. No numbers change.", "el": "Μόνο ρόλος. Κανένας αριθμός δεν αλλάζει." } },
+    { "tier": 2, "name": { "en": "Bleed", "el": "Διαρροή" }, "hint": { "en": "A swap with no net loss.", "el": "Μια ανταλλαγή χωρίς καθαρή απώλεια." } },
+    { "tier": 3, "name": { "en": "Drift", "el": "Μετατόπιση" }, "hint": { "en": "A small cost.", "el": "Ένα μικρό τίμημα." } },
+    { "tier": 4, "name": { "en": "Fracture", "el": "Ρωγμή" }, "hint": { "en": "A real cost.", "el": "Ένα πραγματικό τίμημα." } },
+    { "tier": 5, "name": { "en": "Unraveling", "el": "Ξήλωμα" }, "hint": { "en": "A major cost.", "el": "Ένα βαρύ τίμημα." } }
+  ],
+  "glitches": [
+    {
+      "id": "mismatched-eyes", "tier": 1, "kind": "note",
+      "title": { "en": "Mismatched Eyes", "el": "Ανόμοια μάτια" },
+      "text": {
+        "en": "One of your eyes has changed colour. It is the colour another version of you was born with. Mirrors seem to prefer that eye.",
+        "el": "Το ένα σου μάτι άλλαξε χρώμα. Είναι το χρώμα με το οποίο γεννήθηκε μια άλλη εκδοχή σου. Οι καθρέφτες μοιάζουν να προτιμούν εκείνο το μάτι."
+      }
+    },
+    {
+      "id": "a-beat-behind", "tier": 1, "kind": "note",
+      "title": { "en": "A Beat Behind", "el": "Ένα χτύπο πίσω" },
+      "text": {
+        "en": "Your reflection moves a heartbeat after you do. Only you seem to notice. Mostly.",
+        "el": "Το είδωλό σου κινείται έναν χτύπο της καρδιάς μετά από σένα. Μόνο εσύ φαίνεται να το προσέχεις. Συνήθως."
+      }
+    },
+    {
+      "id": "borrowed-voice", "tier": 1, "kind": "note",
+      "title": { "en": "Borrowed Voice", "el": "Δανεική φωνή" },
+      "text": {
+        "en": "The first words of every sentence come out in an accent you never learned, then your own voice catches up.",
+        "el": "Οι πρώτες λέξεις κάθε φράσης σου βγαίνουν με μια προφορά που δεν έμαθες ποτέ, και μετά η δική σου φωνή σε προλαβαίνει."
+      }
+    },
+    {
+      "id": "the-other-hand", "tier": 1, "kind": "note",
+      "title": { "en": "The Other Hand", "el": "Το άλλο χέρι" },
+      "text": {
+        "en": "You reach for things with your other hand now. It knows what it's doing; you don't. (No effect on your rolls.)",
+        "el": "Τώρα απλώνεις πρώτα το άλλο σου χέρι. Εκείνο ξέρει τι κάνει· εσύ όχι. (Δεν επηρεάζει τις ζαριές σου.)"
+      }
+    },
+    {
+      "id": "a-name-nobody-knows", "tier": 1, "kind": "note",
+      "title": { "en": "A Name Nobody Knows", "el": "Ένα όνομα που κανείς δεν ξέρει" },
+      "text": {
+        "en": "You turn your head at a name no one here has ever called you. Sometimes you sign it without noticing.",
+        "el": "Γυρνάς το κεφάλι σε ένα όνομα που κανείς εδώ δεν σε έχει φωνάξει ποτέ. Κάποιες φορές το υπογράφεις χωρίς να το καταλάβεις."
+      }
+    },
+    {
+      "id": "grave-cold", "tier": 1, "kind": "note",
+      "title": { "en": "Grave-Cold", "el": "Κρύο του τάφου" },
+      "text": {
+        "en": "Your skin stays cold to the touch, however close you sit to the fire. Animals hesitate before they come near you.",
+        "el": "Το δέρμα σου μένει κρύο στο άγγιγμα, όσο κοντά κι αν κάθεσαι στη φωτιά. Τα ζώα διστάζουν πριν σε πλησιάσουν."
+      }
+    },
+    {
+      "id": "scent-of-elsewhere", "tier": 1, "kind": "note",
+      "title": { "en": "Scent of Elsewhere", "el": "Μυρωδιά από αλλού" },
+      "text": {
+        "en": "You smell faintly of a place you have never been: salt, ash or temple incense. It doesn't wash off.",
+        "el": "Μυρίζεις αχνά ένα μέρος όπου δεν έχεις πάει ποτέ: αλάτι, στάχτη ή θυμίαμα ναού. Δεν φεύγει με το πλύσιμο."
+      }
+    },
+    {
+      "id": "lagging-shadow", "tier": 1, "kind": "note",
+      "title": { "en": "Lagging Shadow", "el": "Σκιά που αργεί" },
+      "text": {
+        "en": "In bright light your shadow follows a step behind, and now and then it faces the other way.",
+        "el": "Στο δυνατό φως η σκιά σου έρχεται ένα βήμα πίσω, και πού και πού κοιτάζει από την άλλη μεριά."
+      }
+    },
+    {
+      "id": "someone-elses-habit", "tier": 1, "kind": "note",
+      "title": { "en": "Someone Else's Habit", "el": "Η συνήθεια κάποιου άλλου" },
+      "text": {
+        "en": "You hum a tune you don't know, or count your steps, or touch every doorframe you pass. You only notice when someone points it out.",
+        "el": "Σιγοτραγουδάς έναν σκοπό που δεν ξέρεις, ή μετράς τα βήματά σου, ή αγγίζεις κάθε κάσα πόρτας που περνάς. Το καταλαβαίνεις μόνο όταν σου το πουν."
+      }
+    },
+    {
+      "id": "the-spoke", "tier": 1, "kind": "note",
+      "title": { "en": "The Spoke", "el": "Η ακτίνα" },
+      "text": {
+        "en": "A thin mark like the spoke of a wheel appears on your skin. After every death it looks a little longer.",
+        "el": "Ένα λεπτό σημάδι, σαν ακτίνα τροχού, εμφανίζεται στο δέρμα σου. Μετά από κάθε θάνατο μοιάζει λίγο πιο μακρύ."
+      }
+    },
+    {
+      "id": "wrong-colour", "tier": 1, "kind": "note",
+      "title": { "en": "Wrong Colour", "el": "Λάθος χρώμα" },
+      "text": {
+        "en": "A lock of your hair has turned a colour it has never been, and no dye will hold on it.",
+        "el": "Μια τούφα από τα μαλλιά σου πήρε ένα χρώμα που δεν είχε ποτέ, και καμία βαφή δεν πιάνει πάνω της."
+      }
+    },
+
+    {
+      "id": "another-tongue", "tier": 2, "kind": "language-swap",
+      "title": { "en": "Another Tongue", "el": "Άλλη γλώσσα" },
+      "text": {
+        "en": "You forget {language} as if you had never spoken it, and wake up fluent in {language2}.",
+        "el": "Ξεχνάς τη γλώσσα {language} σαν να μην τη μίλησες ποτέ, και ξυπνάς να μιλάς άπταιστα {language2}."
+      }
+    },
+    {
+      "id": "someone-elses-training", "tier": 2, "kind": "skill-swap",
+      "title": { "en": "Someone Else's Training", "el": "Η εκπαίδευση κάποιου άλλου" },
+      "text": {
+        "en": "Your hands forget {skill}. They remember {skill2} instead, trained in a life you didn't live. (You lose proficiency in {skill} and gain it in {skill2}.)",
+        "el": "Τα χέρια σου ξεχνούν το {skill}. Θυμούνται όμως το {skill2}, από μια ζωή που δεν έζησες. (Χάνεις το proficiency στο {skill} και το κερδίζεις στο {skill2}.)"
+      }
+    },
+    {
+      "id": "rebalanced", "tier": 2, "kind": "ability-swap", "params": { "maxGap": 2 },
+      "title": { "en": "Rebalanced", "el": "Αλλιώς ζυγισμένος" },
+      "text": {
+        "en": "You were put back together slightly differently: your {ability} and {ability2} scores trade places ({from} and {to}).",
+        "el": "Ξαναφτιάχτηκες λίγο αλλιώς: οι τιμές σου σε {ability} και {ability2} αλλάζουν θέση ({from} και {to})."
+      }
+    },
+    {
+      "id": "a-face-half-known", "tier": 2, "kind": "note",
+      "title": { "en": "A Face Half-Known", "el": "Ένα μισογνώριμο πρόσωπο" },
+      "text": {
+        "en": "People who knew you before need a moment to recognise you. The first time you meet each of them again, your first Charisma check with them has Disadvantage.",
+        "el": "Όσοι σε ήξεραν από πριν χρειάζονται μια στιγμή για να σε αναγνωρίσουν. Την πρώτη φορά που ξανασυναντάς τον καθένα, το πρώτο σου Charisma check μαζί του γίνεται με Disadvantage."
+      }
+    },
+    {
+      "id": "a-memory-not-yours", "tier": 2, "kind": "note",
+      "title": { "en": "A Memory That Isn't Yours", "el": "Μια ανάμνηση που δεν είναι δική σου" },
+      "text": {
+        "en": "You remember, vividly, a day from another version of your life. The GM tells you one true detail of it.",
+        "el": "Θυμάσαι ζωντανά μια μέρα από μια άλλη εκδοχή της ζωής σου. Ο DM σού λέει μια αληθινή λεπτομέρειά της."
+      }
+    },
+
+    {
+      "id": "faded", "tier": 3, "kind": "ability-down", "params": { "amount": 1 },
+      "title": { "en": "Faded", "el": "Ξεθωριασμένος" },
+      "text": {
+        "en": "Something didn't come all the way back. Your {ability} drops by 1 ({from} → {to}).",
+        "el": "Κάτι δεν γύρισε ολόκληρο. Το {ability} σου πέφτει κατά 1 ({from} → {to})."
+      }
+    },
+    {
+      "id": "lost-knack", "tier": 3, "kind": "skill-lose",
+      "title": { "en": "Lost Knack", "el": "Χαμένη δεξιότητα" },
+      "text": {
+        "en": "You reach for something you know and find an empty place: you lose proficiency in {skill}.",
+        "el": "Απλώνεις σε κάτι που ξέρεις και βρίσκεις ένα άδειο σημείο: χάνεις το proficiency στο {skill}."
+      }
+    },
+    {
+      "id": "left-behind", "tier": 3, "kind": "lose-item", "params": { "mode": "corpse" },
+      "title": { "en": "Left Behind", "el": "Έμεινε πίσω" },
+      "text": {
+        "en": "{item} didn't come back with you. It is still with your body, if anyone goes back for it.",
+        "el": "Το {item} δεν γύρισε μαζί σου. Είναι ακόμα με το σώμα σου, αν πάει κανείς να το πάρει."
+      }
+    },
+    {
+      "id": "changed-blood", "tier": 3, "kind": "resist-swap",
+      "title": { "en": "Changed Blood", "el": "Αλλαγμένο αίμα" },
+      "text": {
+        "en": "Your blood remembers another life: you have Resistance to {type2} damage and Vulnerability to {type} damage.",
+        "el": "Το αίμα σου θυμάται μια άλλη ζωή: έχεις Resistance σε {type2} damage και Vulnerability σε {type} damage."
+      }
+    },
+    {
+      "id": "slow-to-wake", "tier": 3, "kind": "init-down", "params": { "amount": 2 },
+      "title": { "en": "Slow to Wake", "el": "Αργό ξύπνημα" },
+      "text": {
+        "en": "A part of you is always still arriving: −{n} to Initiative.",
+        "el": "Ένα κομμάτι σου πάντα ακόμα φτάνει: −{n} στο Initiative."
+      }
+    },
+    {
+      "id": "dimmed-eyes", "tier": 3, "kind": "darkvision-lose",
+      "title": { "en": "Dimmed Eyes", "el": "Θαμπά μάτια" },
+      "text": {
+        "en": "The dark has stopped opening up for you: you lose your Darkvision.",
+        "el": "Το σκοτάδι δεν ανοίγει πια για σένα: χάνεις το Darkvision σου."
+      }
+    },
+    {
+      "id": "lost-word", "tier": 3, "kind": "language-lose",
+      "title": { "en": "Lost Word", "el": "Χαμένη λέξη" },
+      "text": {
+        "en": "{language} is gone. You can still tell it's a language, but the words slide past you.",
+        "el": "Η γλώσσα {language} χάθηκε. Καταλαβαίνεις ακόμα ότι είναι γλώσσα, αλλά οι λέξεις σού γλιστράνε."
+      }
+    },
+
+    {
+      "id": "hollow", "tier": 4, "kind": "hp-down", "params": { "perLevel": 1 },
+      "title": { "en": "Hollow", "el": "Κούφιος" },
+      "text": {
+        "en": "Less of you came back. Your Hit Point maximum is reduced by {n}.",
+        "el": "Γύρισε λιγότερο από σένα. Το Hit Point maximum σου μειώνεται κατά {n}."
+      }
+    },
+    {
+      "id": "forgotten-spell", "tier": 4, "kind": "forget-spell",
+      "title": { "en": "Forgotten Spell", "el": "Ξεχασμένο ξόρκι" },
+      "text": {
+        "en": "{spell} is gone from your mind, the way a dream goes. Something else may have taken its place.",
+        "el": "Το {spell} χάθηκε από το μυαλό σου, όπως χάνεται ένα όνειρο. Κάτι άλλο ίσως πήρε τη θέση του."
+      }
+    },
+    {
+      "id": "swallowed", "tier": 4, "kind": "lose-item", "params": { "mode": "gone" },
+      "title": { "en": "Swallowed", "el": "Καταποντισμένο" },
+      "text": {
+        "en": "{item} didn't survive the return. It is somewhere else in the multiverse now. Maybe you'll meet it again.",
+        "el": "Το {item} δεν άντεξε την επιστροφή. Είναι πια κάπου αλλού στο πολυσύμπαν. Ίσως το ξανασυναντήσεις."
+      }
+    },
+    {
+      "id": "cracked", "tier": 4, "kind": "ability-down", "params": { "amount": 2 },
+      "title": { "en": "Cracked", "el": "Ραγισμένος" },
+      "text": {
+        "en": "Your {ability} drops by 2 ({from} → {to}).",
+        "el": "Το {ability} σου πέφτει κατά 2 ({from} → {to})."
+      }
+    },
+    {
+      "id": "blunted", "tier": 4, "kind": "fewer-uses",
+      "title": { "en": "Blunted", "el": "Αμβλυμένο" },
+      "text": {
+        "en": "{feature} has one use fewer ({from} → {to}).",
+        "el": "Το {feature} έχει μία χρήση λιγότερη ({from} → {to})."
+      }
+    },
+    {
+      "id": "unbound", "tier": 4, "kind": "unattune",
+      "title": { "en": "Unbound", "el": "Λυμένος δεσμός" },
+      "text": {
+        "en": "{item} doesn't recognise you. Your attunement to it breaks, and it won't accept you again until this glitch is mended.",
+        "el": "Το {item} δεν σε αναγνωρίζει. Το attunement σου σε αυτό σπάει, και δεν σε ξαναδέχεται μέχρι να διορθωθεί αυτό το σφάλμα."
+      }
+    },
+
+    {
+      "id": "fading-self", "tier": 5, "kind": "fade-feature", "params": { "types": ["feat"] },
+      "title": { "en": "Fading Self", "el": "Ο εαυτός που σβήνει" },
+      "text": {
+        "en": "{feature} fades out of you, like a habit from someone else's life.",
+        "el": "Το {feature} σβήνει από μέσα σου, σαν συνήθεια από τη ζωή κάποιου άλλου."
+      }
+    },
+    {
+      "id": "lost-heritage", "tier": 5, "kind": "fade-feature", "params": { "types": ["race"] },
+      "title": { "en": "Lost Heritage", "el": "Χαμένη καταγωγή" },
+      "text": {
+        "en": "Your body forgets {feature}.",
+        "el": "Το σώμα σου ξεχνά το {feature}."
+      }
+    },
+    {
+      "id": "crumbling", "tier": 5, "kind": "ability-down", "params": { "amount": 2, "count": 2 },
+      "title": { "en": "Crumbling", "el": "Θρυμματισμένος" },
+      "text": {
+        "en": "Your {ability} and {ability2} each drop by 2 ({from} → {to}, {from2} → {to2}).",
+        "el": "Το {ability} και το {ability2} σου πέφτουν κατά 2 το καθένα ({from} → {to}, {from2} → {to2})."
+      }
+    },
+    {
+      "id": "deep-hollow", "tier": 5, "kind": "hp-down", "params": { "perLevel": 2 },
+      "title": { "en": "Deep Hollow", "el": "Βαθύ κενό" },
+      "text": {
+        "en": "Much less of you came back. Your Hit Point maximum is reduced by {n}.",
+        "el": "Γύρισε πολύ λιγότερο από σένα. Το Hit Point maximum σου μειώνεται κατά {n}."
+      }
+    },
+    {
+      "id": "unmade-gift", "tier": 5, "kind": "lose-item", "params": { "mode": "gone", "magic": true },
+      "title": { "en": "Unmade Gift", "el": "Ξεγινωμένο δώρο" },
+      "text": {
+        "en": "{item}, the magic you carried, is swallowed by the glitch.",
+        "el": "Το {item}, η μαγεία που κουβαλούσες, το κατάπιε το σφάλμα."
+      }
+    },
+    {
+      "id": "open-wound", "tier": 5, "kind": "vulnerability",
+      "title": { "en": "Open Wound in the World", "el": "Ανοιχτή πληγή στον κόσμο" },
+      "text": {
+        "en": "Reality has a hole shaped like you: you have Vulnerability to {type} damage.",
+        "el": "Η πραγματικότητα έχει μια τρύπα στο σχήμα σου: έχεις Vulnerability σε {type} damage."
+      }
+    }
+  ],
+  "reminders": []
+}
