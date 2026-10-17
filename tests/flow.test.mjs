@@ -378,3 +378,18 @@ test("an item dropped on a record comes back with them, and goes again on Mend",
   await apply.mend(hero, hero.items.get(g.id));
   assert.equal(hero.items.get(born.id), undefined);
 });
+
+test("the merged catalog is built once and rebuilt when a pack is imported or reset", async () => {
+  const first = state.catalog();
+  assert.equal(state.catalog(), first, "same object while nothing changed");
+  const base = first.glitches.length;
+  const errors = await state.importPack({ schema: 1, id: "test-pack", name: "Test pack", glitches: [
+    { id: "test-extra", tier: 1, kind: "note", title: "Extra", text: "An extra glitch." }
+  ] });
+  assert.deepEqual(errors, []);
+  const after = state.catalog();
+  assert.notEqual(after, first, "a new pack gives a new merge");
+  assert.ok(after.glitches.some(g => g.id === "test-extra"));
+  await state.resetPack();
+  assert.equal(state.catalog().glitches.length, base, "reset goes back to the shipped catalog");
+});

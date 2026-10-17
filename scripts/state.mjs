@@ -19,12 +19,19 @@ export async function loadDefaultCatalog() {
   if (defaultCatalog) return defaultCatalog;
   try { defaultCatalog = await (await fetch(DEFAULT_CATALOG_PATH)).json(); }
   catch (err) { console.error(`${MODULE_ID} | default catalog failed to load`, err); defaultCatalog = { schema: 1, id: "default", glitches: [] }; }
+  invalidateCatalog();
   return defaultCatalog;
 }
 
 export const importedPack = () => setting("pack");
+
+// The merged catalog is read on every sheet render (badges) and console redraw: merge it once and
+// again only when the pack changes (the setting's onChange, on every client) or the default loads.
+// Treat it as read-only.
+let merged = null;
+export function invalidateCatalog() { merged = null; }
 /** The active catalog: the shipped one with the imported pack on top. */
-export const catalog = () => mergeCatalogs(defaultCatalog, importedPack());
+export const catalog = () => (merged ??= mergeCatalogs(defaultCatalog, importedPack()));
 export const entry = id => catalog().glitches.find(g => g.id === id) ?? null;
 
 /** Import a pack (object). Returns the problems found; saves only if there are none. */
@@ -32,9 +39,13 @@ export async function importPack(data) {
   const errors = validateCatalog(data);
   if (errors.length) return errors;
   await setSetting("pack", data);
+  invalidateCatalog();
   return [];
 }
-export const resetPack = () => setSetting("pack", null);
+export async function resetPack() {
+  await setSetting("pack", null);
+  invalidateCatalog();
+}
 
 /** Language for glitch text: the setting, or this client's language. */
 export function textLang() {

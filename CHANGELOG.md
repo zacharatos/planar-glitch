@@ -2,6 +2,12 @@
 
 All notable changes to this module are listed here. The release workflow uses the section for the tagged version as the release notes.
 
+## [0.1.1]
+
+### Fixed
+- **Character sheets render faster.** The glitch catalog (the shipped one merged with your pack) was rebuilt for every badge on every sheet render, and players' sheets re-render on every HP change. It's now merged once and again only when the pack changes.
+- **The GM console no longer redraws for every actor update.** Only player characters (and ownership changes) refresh it, so NPC damage in combat doesn't redraw it while it's open.
+
 ## [0.1.0]
 
 First release.

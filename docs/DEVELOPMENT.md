@@ -143,11 +143,16 @@ Reload the browser (F5) after each change. Use a second browser logged in as a p
 **Packs**
 - Import a broken JSON: error toast, details in the console (F12), nothing saved. Import a valid pack: personal glitches show with their character tag; one of the two candidates is personal when one fits; reminders show on that character's death card.
 - Export pack writes the imported pack (or an empty template).
+- Import a pack, then open a hero's sheet: the badges show the new tier names at once (no reload). Reset the pack: they go back.
+
+**Performance**
+- Console open on the Deaths tab during a fight: damaging an NPC doesn't make the console redraw (no flicker); damaging a hero does.
 
 ## Changing things
 
 - **New user-facing text:** add the key to `lang/en.json` and `lang/el.json`. The language test fails if they differ.
 - **New glitch kind:** add it to `KINDS`, `poolsFor` and `resolve` in `util.mjs` (with tests), describe it in `effectLines` (`deaths.mjs`), and document it in the README table. Everything it changes must be undoable from the feature's flags or its Active Effect.
+- **Catalog cache:** `catalog()` returns one merged object, rebuilt only when the pack changes (`invalidateCatalog`, called from the `pack` setting's `onChange` and from `importPack` / `resetPack`). Treat it as read-only; the public API hands out a copy.
 - **Catalog format:** `validateCatalog` checks what the engine relies on. A breaking change bumps `CATALOG_SCHEMA` and needs a note in the README and the changelog.
 - **Records:** add fields freely (old records just lack them); a change of meaning bumps `RECORD_SCHEMA` with a migration on `ready`.
 

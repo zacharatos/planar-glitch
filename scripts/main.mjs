@@ -1,6 +1,6 @@
 import { MODULE_ID, FEATURE_TYPE } from "./constants.mjs";
 import { registerSettings } from "./settings.mjs";
-import { loadDefaultCatalog, catalog, records } from "./state.mjs";
+import { loadDefaultCatalog, catalog, records, invalidateCatalog } from "./state.mjs";
 import { registerSocket, onPrompt, setFxPlayer } from "./rpc.mjs";
 import { registerDetection, recordDeath } from "./deaths.mjs";
 import { mend } from "./apply.mjs";
@@ -14,7 +14,7 @@ import { serial } from "./state.mjs";
 const refresh = () => GlitchConsole.instance?.refreshSoon();
 
 Hooks.once("init", () => {
-  registerSettings({ onState: refresh });
+  registerSettings({ onState: what => { if (what === "pack") invalidateCatalog(); refresh(); } });
   // Glitch features get their own feature type (and their own group on the sheet).
   try {
     const types = globalThis.CONFIG?.DND5E?.featureTypes;
@@ -46,7 +46,7 @@ Hooks.once("ready", async () => {
     },
     endGlitch: () => GlitchConsole.open({ tab: "characters" }),
     records: () => records(),
-    catalog: () => catalog(),
+    catalog: () => foundry.utils.deepClone(catalog()),
     playFx: data => playGlitch(data)
   };
 });
@@ -74,7 +74,10 @@ Hooks.on("getSceneControlButtons", controls => {
 
 // Keep the console current when glitch features or the actors change.
 for (const hook of ["createItem", "updateItem", "deleteItem"]) Hooks.on(hook, item => { if (item?.getFlag?.(MODULE_ID, "glitch") || item?.getFlag?.(MODULE_ID, "touched")) refresh(); });
-Hooks.on("updateActor", refresh);
+// Only player characters show in the console; NPC hit points changing in combat don't redraw it.
+Hooks.on("updateActor", (actor, changes) => {
+  if (actor?.type === "character" || "ownership" in (changes ?? {})) refresh();
+});
 Hooks.on("updateUser", refresh);
 Hooks.on("userConnected", refresh);
 
