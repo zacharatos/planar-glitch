@@ -2,6 +2,12 @@
 
 All notable changes to this module are listed here. The release workflow uses the section for the tagged version as the release notes.
 
+## [0.1.2]
+
+### Changed
+- The manifest recommends Planar Codex (the Glitch Tracker note) and Planar Soundboard (death and return pads), so Foundry points them out when they're missing.
+- CI and release workflows use `actions/checkout@v5` and `actions/setup-node@v5`; CI runs with read-only repository permissions.
+
 ## [0.1.1]
 
 ### Fixed

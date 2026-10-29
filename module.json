@@ -13,6 +13,10 @@
   "relationships": {
     "systems": [
       { "id": "dnd5e", "type": "system", "compatibility": { "minimum": "6.0.0" } }
+    ],
+    "recommends": [
+      { "id": "planar-codex", "type": "module", "reason": "The «Glitch Tracker» death log is written as a Codex note that exports to your vault." },
+      { "id": "planar-soundboard", "type": "module", "reason": "A death and a return can play Soundboard pads (set in the module settings)." }
     ]
   },
   "esmodules": ["scripts/main.mjs"],
